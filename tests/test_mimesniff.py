@@ -13,6 +13,7 @@ AUDIO_DIR = os.path.join(LOCAL_DIR, 'resources', 'audio')
 VIDEO_DIR = os.path.join(LOCAL_DIR, 'resources', 'video')
 
 
+
 class TestMimesniff(unittest.TestCase):
 
     def check_mime(self, mime_dir, resources):
@@ -104,6 +105,7 @@ class TestMimesniff(unittest.TestCase):
             with self.subTest(data=data):
                 ret = mimesniff.what(data)
                 self.assertEqual(ret, expected)
+
 
     def test_unsupported_input(self):
         with self.assertRaises(NotImplementedError):
